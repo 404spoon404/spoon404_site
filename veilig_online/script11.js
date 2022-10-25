@@ -2,16 +2,16 @@
 //
 const question1 = {
 	QuestNr: "1",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["een", "twee", "drie", "vier"]
+	Question: "Wat doe je als je een email ontvangt die je niet vertrouwd?",
+	AswerRight: "Weggooien",
+	Answers: ['een', 'Er op klikken', 'Weggooien', 'vier']
 };
 
 const question2 = {
 	QuestNr: "2",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Je ontvangt een mail met de antwoorden op de toets. Je kan op de mail klikken om in te loggen, wat doe je?",
+	AswerRight: "Mail weggooien en via Teams vragen aan de verzender of het klopt",
+	Answers: ["aapjesenzo"]
 };
 
 const question3 = {
@@ -56,6 +56,7 @@ const question8 = {
 	Answers: ["duck", "twee", "drie", "vier"]
 };
 
+let numberOfQuestions = 8;
 
 //Load all questionnumbers on page.
 let Questions_page = document.querySelectorAll(".question");
@@ -80,8 +81,6 @@ function buttonmaker(question) {
 	questionNr = questionEV.QuestNr
 	let buttons = questionEV.Answers;
 	let questionTxt = questionEV.Question;
-	console.log(questionName)
-	console.log(questionEV.QuestNr)
 	//write text of the question
 	text = '<div id="' + questionName + '_text"> <p>' + questionTxt + '</p> </div>'; 
 	//add the text of the buttons
@@ -102,9 +101,8 @@ function feedback(question_Nr) {
 
 function tester(reply, replyAnswer) {
 	let replyQuestion = eval('question'+reply);
-	let storeId = 'Answer' + replyQuestion.QuestNr;
+	let storeId = 'question' + replyQuestion.QuestNr;
 	if (replyAnswer === replyQuestion.AswerRight) {
-		console.log('question' + reply + '_answer')
 		document.getElementById('question' + reply + '_answer').innerHTML = '<p>Goed</p>';
 		sessionStorage.setItem(storeId,1);
 	}
@@ -112,4 +110,31 @@ function tester(reply, replyAnswer) {
 		document.getElementById('question' + reply + '_answer').innerHTML = '<p>Dat is niet het goede antwoord</p>';
 		sessionStorage.setItem(storeId,0);
 	}
+}
+
+function showscore() {
+	console.log(sessionStorage.length)
+	let scoreTxt = ''
+	for (let i = 1; i <= numberOfQuestions; i++){
+		answerQuestion = 'question' + i;
+		answerQuestionEV = eval(answerQuestion)
+		console.log(answerQuestion)
+		result = sessionStorage.getItem(answerQuestion)
+		console.log(result)
+		if (result == 1) {
+			scoreTxt += '<div class="answerCorrect"><p> Vraag ' + answerQuestionEV.QuestNr + '</br>' + answerQuestionEV.Question + '</br> Is goed</p></div>'
+		}
+		else if (result == 0) {
+			scoreTxt += '<div class="answerInCorrect"><p> Vraag ' + answerQuestionEV.QuestNr + '</br>' + answerQuestionEV.Question + '</br> Is nog niet goed</p></div>'
+		}
+		else {
+			scoreTxt += '<div class="answerInCorrect"><p> Vraag ' + answerQuestionEV.QuestNr + '</br>' + answerQuestionEV.Question + '</br> Heb je nog niet beantwoord</p></div>'
+		}
+	document.getElementById("Score").innerHTML = scoreTxt;
+	}
+}
+
+function resetscore() {
+	sessionStorage.clear()
+	showscore()
 }
