@@ -27,11 +27,23 @@ ul {
 	padding: 5px 5px;
 	display: inline-block;
 	margin: 2px;
-	width: 90%;
+	width: 90%; 
 	list-style-type: none;
 }
 
-.vraag {
+.question {
+	background-color: F8F8F8;
+	border-radius: 25px;
+	padding: 3px;
+	box-shadow: -2px -2px lightgrey;
+	text-decoration: none;
+}
+
+.button_vraag {
+	background-color: lightgrey;
+	color: black;
+	text-decoration: none;
+	border-radius: 20px;
 }
 
 /* ---- grid ----
