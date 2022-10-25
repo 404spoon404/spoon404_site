@@ -4,56 +4,56 @@ const question1 = {
 	QuestNr: "1",
 	Question: "Wat doe je als je een email ontvangt die je niet vertrouwd?",
 	AswerRight: "Weggooien",
-	Answers: ['een', 'Er op klikken', 'Weggooien', 'vier']
+	Answers: ["De instucties in de mail volgen", "Er op klikken", "Weggooien",]
 };
 
 const question2 = {
 	QuestNr: "2",
-	Question: "Je ontvangt een mail met de antwoorden op de toets. Je kan op de mail klikken om in te loggen, wat doe je?",
-	AswerRight: "Mail weggooien en via Teams vragen aan de verzender of het klopt",
-	Answers: ["aapjesenzo"]
+	Question: "Je ontvangt een mail waarin staat dat je moet klikken en inloggen voor je cijfer voor een toets",
+	AswerRight: "De mail weggooien en via de browser naar Somtoday gaan",
+	Answers: ["De mail weggooien en via de browser naar Somtoday gaan", "Controleren of de link wel naar Somtoday gaat en dan kliken", "Klikken op de mail en inloggen"]
 };
 
 const question3 = {
 	QuestNr: "3",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Je vind een USB-stick op de grond buiten de school, wat doe je",
+	AswerRight: "Inleveren bij een docent",
+	Answers: ["Kijken wat er op staat", "Inleveren bij een docent", "Een virusscanner draaien en dan testen", "Het programma dat erop staat installeren"]
 };
 
 const question4 = {
 	QuestNr: "4",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Als je een website bezoekt weet de eigenaar waar je woont",
+	AswerRight: "Dat is niet waar. De politie kan het wel opzoeken",
+	Answers: ["Dat is niet waar", "Dat is waar", "Ja, ze hebben het IP adres", "Dat is niet waar. De politie kan het wel opzoeken"]
 };
 
 const question5 = {
 	QuestNr: "5",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Welke cookies moet je accepteren om een site goed te laten werken?",
+	AswerRight: "functionele cookies",
+	Answers: ["analyse cookies", "functionele cookies", "alle cookies", "optionele cookies"]
 };
 
 const question6 = {
 	QuestNr: "6",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Weet Facebook ook wat je doet op niet Facebook sites",
+	AswerRight: "Ja",
+	Answers: ["Alleen als je cookies accepteert", "Alleen als je een Facebook account hebt", "Nee", "Ja"]
 };
 
 const question7 = {
 	QuestNr: "7",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Als je alle gegevens van je computer en de sites die je bezoekt bij elkaar zet, ben je dan uniek?",
+	AswerRight: "Ja",
+	Answers: ["Ja", "Nee"]
 };
 
 const question8 = {
 	QuestNr: "8",
-	Question: "Hoeveel is goed?",
-	AswerRight: "vier",
-	Answers: ["duck", "twee", "drie", "vier"]
+	Question: "Wat is het grootste nadeel van 2 factor authenticatie?",
+	AswerRight: "Als je de 2e factor kwijt bent kan je niet meer inloggen",
+	Answers: ["Je moet je 2e factor altijd bij je hebben", "Het kost veel tijd om in te loggen", "Je bent niet meer te hacken", "Als je de 2e factor kwijt bent kan je niet meer inloggen"]
 };
 
 let numberOfQuestions = 8;
@@ -80,18 +80,23 @@ function buttonmaker(question) {
 	questionEV = eval(question);
 	questionNr = questionEV.QuestNr
 	let buttons = questionEV.Answers;
+
 	let questionTxt = questionEV.Question;
+
 	//write text of the question
 	text = '<div id="' + questionName + '_text"> <p>' + questionTxt + '</p> </div>'; 
 	//add the text of the buttons
 	buttons.forEach(buttonfiller);
 	//add the div for the answer
 	text += '<div id="' + questionName + '_answer"><p><br></p></div>';
+	console.log(text)
 	return text;
+
 }
 
 function buttonfiller(answerTxt) {
-	text += '<button onclick=tester(' + questionNr + ',"' + answerTxt + '") class="button_vraag">' + answerTxt + '</button>';
+	answerTxtQuo = '\"' + answerTxt + '\"'
+	text += "<button class='button_vraag' onclick='tester(" + questionNr + "," + answerTxtQuo +")' >" + answerTxt + "</button>";
 }
 
 function feedback(question_Nr) {
@@ -101,6 +106,7 @@ function feedback(question_Nr) {
 
 function tester(reply, replyAnswer) {
 	let replyQuestion = eval('question'+reply);
+	console.log(replyQuestion.QuestNr)
 	let storeId = 'question' + replyQuestion.QuestNr;
 	if (replyAnswer === replyQuestion.AswerRight) {
 		document.getElementById('question' + reply + '_answer').innerHTML = '<p>Goed</p>';
