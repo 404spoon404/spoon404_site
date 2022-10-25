@@ -32,7 +32,7 @@ ul {
 }
 
 .vraag {
-
+}
 
 /* ---- grid ----
  *
@@ -42,9 +42,15 @@ ul {
 	display: grid;
 	grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
 }
+.logo {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
 
 .header {
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end: 10;
 	grid-row-start: 1;
 	grid-row-end: 1;
@@ -62,4 +68,37 @@ ul {
 	grid-column-end: 10;
 	grid-row-start: 2;
 	grid-row-end: 2;
+}
+
+/* ---- Classes -----
+*
+*/
+.navbutton {
+	background-color: lightgrey;
+	color: black;
+	text-decoration: none;
+	border: solid;
+	border-color: #0099FF;
+	border-width: 1px;
+	border-radius: 20px;
+	font-size: 18px;
+	text-align: center;
+	padding: 5px 5px;
+	display: inline-block;
+	margin: 2px;
+	width: 90%;
+}
+
+/* ---- ID's ----
+*
+*/
+
+#logoimg {
+	width: 100%;
+	height: auto;
+	border-radius: 25%;
+}
+
+#buttonback {
+	background-color: lightblue;
 }
