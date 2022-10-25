@@ -34,12 +34,12 @@ function buttonmaker(question) {
 	// init the text of the question and the array with answers
 	let questionName = question;
 	// Turn questionstring into Object...
-	question = eval(question);
-	let aquestionNr = question.QuestNr
-	let buttons = question.Answers;
-	let questionTxt = question.Question;
-	console.log(question)
-	console.log(question.QuestNr)
+	questionEV = eval(question);
+	questionNr = questionEV.QuestNr
+	let buttons = questionEV.Answers;
+	let questionTxt = questionEV.Question;
+	console.log(questionName)
+	console.log(questionEV.QuestNr)
 	//write text of the question
 	text = '<div id="' + questionName + '_text"> <p>' + questionTxt + '</p> </div>'; 
 	//add the text of the buttons
@@ -50,7 +50,7 @@ function buttonmaker(question) {
 }
 
 function buttonfiller(answerTxt) {
-	text += '<button onclick=tester() class="button_vraag">' + answerTxt + '</button>';
+	text += '<button onclick=tester(' + questionNr + ',"' + answerTxt + '") class="button_vraag">' + answerTxt + '</button>';
 }
 
 function feedback(question_Nr) {
@@ -58,6 +58,9 @@ function feedback(question_Nr) {
 	
 }
 
-function tester(questionNr) {
-	console.log(questionNr);	
+function tester(reply, replyAnswer) {
+	let replyQuestion = eval('question'+reply)
+	if (replyAnswer === replyQuestion.AswerRight) {
+		console.log("yeet")
+	}
 }
