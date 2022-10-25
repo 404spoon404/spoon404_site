@@ -8,7 +8,49 @@ const question1 = {
 };
 
 const question2 = {
-	QuestNr: "1",
+	QuestNr: "2",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question3 = {
+	QuestNr: "3",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question4 = {
+	QuestNr: "4",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question5 = {
+	QuestNr: "5",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question6 = {
+	QuestNr: "6",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question7 = {
+	QuestNr: "7",
+	Question: "Hoeveel is goed?",
+	AswerRight: "vier",
+	Answers: ["duck", "twee", "drie", "vier"]
+};
+
+const question8 = {
+	QuestNr: "8",
 	Question: "Hoeveel is goed?",
 	AswerRight: "vier",
 	Answers: ["duck", "twee", "drie", "vier"]
@@ -45,7 +87,7 @@ function buttonmaker(question) {
 	//add the text of the buttons
 	buttons.forEach(buttonfiller);
 	//add the div for the answer
-	text += '<div id="' + questionName + '_answer"><br></div>';
+	text += '<div id="' + questionName + '_answer"><p><br></p></div>';
 	return text;
 }
 
@@ -59,8 +101,15 @@ function feedback(question_Nr) {
 }
 
 function tester(reply, replyAnswer) {
-	let replyQuestion = eval('question'+reply)
+	let replyQuestion = eval('question'+reply);
+	let storeId = 'Answer' + replyQuestion.QuestNr;
 	if (replyAnswer === replyQuestion.AswerRight) {
-		console.log("yeet")
+		console.log('question' + reply + '_answer')
+		document.getElementById('question' + reply + '_answer').innerHTML = '<p>Goed</p>';
+		sessionStorage.setItem(storeId,1);
+	}
+	else {
+		document.getElementById('question' + reply + '_answer').innerHTML = '<p>Dat is niet het goede antwoord</p>';
+		sessionStorage.setItem(storeId,0);
 	}
 }
