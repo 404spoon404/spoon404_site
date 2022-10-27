@@ -29,6 +29,7 @@ ul {
 	margin: 2px;
 	width: 90%; 
 	list-style-type: none;
+	cursor: pointer;
 }
 
 .question {
@@ -44,6 +45,7 @@ ul {
 	color: black;
 	text-decoration: none;
 	border-radius: 20px;
+	cursor: pointer;
 }
 
 /* ---- grid ----
@@ -99,6 +101,7 @@ ul {
 	display: inline-block;
 	margin: 2px;
 	width: 90%;
+	cursor: pointer;
 }
 
 /* ---- ID's ----
