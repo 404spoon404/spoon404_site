@@ -6,7 +6,7 @@ const lessons =
 		"name": "Veilig online",
 		"paragraphs": [
 			{
-				"id": "p1.1", // Paragraph name (folder is ./<chapter>/<paragraph>)
+				"id": "p1_1", // Paragraph name (folder is ./<chapter>/<paragraph>)
 				"title": "Veilig online 1.1\nIs het internet veilig?"
 			}
 		]
