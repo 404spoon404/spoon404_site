@@ -49,7 +49,6 @@ const questions =
 		"content": [
 			"Een virus is een ongewenst programma op je computer.",
 			"<t>Ransomware", // <t> implies that it's another header (<h1>), it's implemented programmatically
-			"<img>imagenorm,./IMG/Logo404.png,Een logo", //<img> lets you enter an image, is comma seperated: class, source, alt text
 			"Ransomware is een programma dat de gegevens op je computer gijzelt. Deze programma's komen vaak binnen via een Phisingmail.",
 			"Op het moment dat je een ransomware programma op je computer hebt gaat dit op zoek naar je bestanden. Het kijkt bijvoorbeeld in je \"Mijn Documenten\". De bestanden die gevonden worden met een wiskundige berekening gecodeerd. Na die codering kan je ze zelf niet meer bekijken.",
 			"Vaak neemt het programma de browser over en laat het zien waar je geld moet betalen om de code te krijgen om je bestanden te decoderen. Als je dit betaald hebt krijg je een meestal een code en kan je weer bij je bestanden."
