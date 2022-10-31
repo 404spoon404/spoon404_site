@@ -46,7 +46,17 @@ var main = document.querySelector("div.main");
 		main.appendChild(NEW("h1", " " + q.header + " "));
 	}
 	// Information content
-	for (var i = 0; i < q.content.length; i++) main.appendChild(q.content[i].startsWith("<t>") ? NEW("h1", " " + q.content[i].substring(3) + " ") : NEW("p", q.content[i]));
+	for (var i = 0; i < q.content.length; i++) { 
+		if (q.content[i].startsWith("<t>")) {
+			main.appendChild(NEW("h1", " " + q.content[i].substring(3) + " "))
+		}
+		else if (q.content[i].startsWith("<img>")) {
+			main.appendChild(IMG("img" , q.content[i].substring(5)))
+		}
+		else {
+			main.appendChild(NEW("p", " " + q.content[i] + " "))
+		}
+	}
 	if (q.question) {
 		// Question generator
 		var txt = '<div id="question_text"> <p>' + q.question.ask + '</p> ';
@@ -67,6 +77,18 @@ var main = document.querySelector("div.main");
 		main.appendChild(v);
 	}
 })();
+
+function IMG(e, data, h){
+	var l = document.createElement(e);
+	var dataAr = data.split(",")
+	l.setAttribute("class", dataAr[0])
+	l.setAttribute("src", dataAr[1])
+	l.setAttribute("alt", dataAr[2])
+
+	if (h) l.innerHTML = h;
+	return l;
+}
+
 
 function NEW(e, t, h) {
 	var l = document.createElement(e);

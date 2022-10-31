@@ -104,6 +104,17 @@ ul {
 	cursor: pointer;
 }
 
+/* ----- Image Classes ---
+*
+*/
+.imagenorm {
+	width: 50%;
+	height:  auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
 /* ---- ID's ----
 *
 */
@@ -117,3 +128,4 @@ ul {
 #buttonback {
 	background-color: lightblue;
 }
+
