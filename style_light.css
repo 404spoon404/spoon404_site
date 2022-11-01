@@ -107,8 +107,31 @@ ul {
 /* ----- Image Classes ---
 *
 */
-.imagenorm {
+.imagevsmall {
+	width: 10%;
+	height:  auto;
+}
+
+
+.imagesmall {
+	width: 25%;
+	height:  auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+
+.imagemid {
 	width: 50%;
+	height:  auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.imagelarge {
+	width: 100%;
 	height:  auto;
 	display: block;
 	margin-left: auto;
