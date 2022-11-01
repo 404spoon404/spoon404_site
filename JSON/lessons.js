@@ -14,8 +14,9 @@ const lessons =
 				"title": "Veilig online 1.2\nVoor wie ben je bang?"
 			},
 
-			{"id": "P2_1",
-			"title": "Veilig online 2.1\nHoe werkt het internet?"
+			{
+				"id": "p2_1",
+				"title": "Veilig online 2.1\nHoe werkt het internet?"
 			}
 
 		]

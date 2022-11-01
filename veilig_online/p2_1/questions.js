@@ -109,7 +109,7 @@ const questions =
 			"Tekst"
 		],
 		"question": {
-			"ask": "Een webiste dit je bezocht hebt staat op je harde schijg",
+			"ask": "Een website dit je bezocht hebt staat op je harde schijg",
 			"answers": ["Dat is waar, maar na een tijdje vergeet hij dit", "Dat is niet waar, de site staat op het Internet"],
 			"correct": 0
 		},
