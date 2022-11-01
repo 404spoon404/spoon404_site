@@ -31,13 +31,14 @@ const questions =
 			"- Het kan heel irritant zijn als je op het internet de hele tijd dezelfde reclames moet kijken, zeker als je het al gekocht hebt."
 			],
 		"question": {
-			"ask": "Wat doe je als je een email ontvangt die je niet vertrouwd?", // The question
+			"ask": "Waar verdienen Social Media het meeste geld mee?", // The question
 			"answers": [ // The answers available to give
-				"De instucties in de mail volgen",
-				"Er op klikken",
-				"Weggooien"
+				"Abbonementen",
+				"Advertenties",
+				"Google resultaten",
+				"Ze verdienen geen geld"
 			],
-			"correct": 2 // Index in "answers" of the correct answer (answers[2] is "Weggooien" in this case)
+			"correct": 1 // Index in "answers" of the correct answer (answers[2] is "Weggooien" in this case)
 		},
 		"next": true
 	},
@@ -52,9 +53,9 @@ const questions =
 			"Dat is lekker verdienen."
 		],
 		"question": {
-			"ask": "Je ontvangt een mail waarin staat dat je moet klikken en inloggen voor je cijfer voor een toets, wat doe je?",
-			"answers": ["De mail weggooien en via de browser naar Somtoday gaan", "Controleren of de link wel naar Somtoday gaat en dan kliken", "Klikken op de mail en inloggen"],
-			"correct": 0
+			"ask": "Als iets te mooi lijkt om waar te zijn",
+			"answers": ["Dan moet je het doen", "Dan is het dat meestal ook", "Kan je het wel proberen"],
+			"correct": 1
 		},
 		"next": true
 	},
@@ -72,9 +73,9 @@ const questions =
 			"De black hats zijn iets gevaarlijker. Maar wij zijn niet zo belangrijk. Er zijn veel mensen met meer geld en met betere geheimen. De black hats gaan achter die andere mensen aan."
 		],
 		"question": {
-			"ask": "Je vind een USB-stick op de grond buiten de school, wat doe je?",
-			"answers": ["Kijken wat er op staat", "Inleveren bij een docent", "Een virusscanner draaien en dan testen", "Het programma dat erop staat installeren"],
-			"correct": 0
+			"ask": "Een computer hacken is verboden",
+			"answers": ["Ja, je mag niet hacken", "Nee, het mag als je maar aangeeft wat je gedaan hebt", "Alleen als je gepakt wordt", "Nee, het mag met toestemming"],
+			"correct": 3
 		},
 		"next": true
 	},
@@ -84,11 +85,7 @@ const questions =
 			"Waarom zou je bang zijn voor bekenden? Nou, wij doen heel veel dingen op het internet en wij willen niet altijd dat mensen die wij kennen alles weten wat wij uitspoken. Je kan vast wel iets bedenken dat je op het internet doet wat je liever niet hebt dat je ouders weten.",
 			"Mijn moeder hoeft van mij niet te weten hoe veel geld ik aan mijn hobbies uitgeef. Het is nu mijn eigen geld en ze kan mijn zakgeld niet meer afpakken. Maar nog steeds, je wil niet dat je ouders, buren of de persoon die je leuk vindt alles van je uit kan vinden."
 		],
-		"question": {
-			"ask": "Als je een website bezoekt weet de eigenaar waar je woont",
-			"answers": ["Dat is niet waar", "Dat is waar", "Ja, ze hebben het IP adres", "Dat is niet waar. De politie kan het wel opzoeken"],
-			"correct": 3
-		},
+		"question": undefined,
 		"next": true
 	},
 	{
@@ -100,9 +97,9 @@ const questions =
 			"Hij heeft het filmpje offline gehaald en er is gelukkig verder niets gebeurd. Stel je dit wel even voor, wat kan iemand die je Instagram kan zien allemaal van je uitvinden. Andere mensen zijn soms wel eng. Daarom zit ik zo graag lekker alleen achter de computer :)"
 		],
 		"question": {
-			"ask": "Als je een website bezoekt weet de eigenaar waar je woont",
-			"answers": ["Dat is niet waar", "Dat is waar", "Ja, ze hebben het IP adres", "Dat is niet waar. De politie kan het wel opzoeken"],
-			"correct": 3
+			"ask": "Het is mogelijk om precies te weten wie welke informatie van mij heeft",
+			"answers": ["Dat klopt, je kan dit opvragen", "Nee, je weet niet wat computers allemaal doorgeven", "Dat klopt, ik weet wat ik op Social Media zet"],
+			"correct": 1
 		},
 		"next": true
 	},

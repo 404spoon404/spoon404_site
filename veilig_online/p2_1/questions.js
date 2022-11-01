@@ -43,11 +43,11 @@ const questions =
 			"Een server met als enige doel het aanbieden van een of meer websites."
 		],
 		"question": {
-			"ask": "Wat doe je als je een email ontvangt die je niet vertrouwd?", // The question
+			"ask": "Een browser kan zelf programma's op je computer installeren.", // The question
 			"answers": [ // The answers available to give
-				"De instucties in de mail volgen",
-				"Er op klikken",
-				"Weggooien"
+				"Dat is waar, maar alleen in de Sandbox",
+				"Dat is waar",
+				"Dat is niet waar",
 			],
 			"correct": 2 // Index in "answers" of the correct answer (answers[2] is "Weggooien" in this case)
 		},
@@ -70,9 +70,9 @@ const questions =
 			"Je eigen huis heeft hier dus 1 eigen IP adres. Dit ziet elke website die je bezoekt."
 		],
 		"question": {
-			"ask": "Je ontvangt een mail waarin staat dat je moet klikken en inloggen voor je cijfer voor een toets, wat doe je?",
-			"answers": ["De mail weggooien en via de browser naar Somtoday gaan", "Controleren of de link wel naar Somtoday gaat en dan kliken", "Klikken op de mail en inloggen"],
-			"correct": 0
+			"ask": "Een webiste kan zien vanaf welke computer je eeen website bezoekt",
+			"answers": ["Dat is waar anders kan je de site niet zien", "Dat is niet waar, de site ziet alleen maar het IP van je huis", "Dat is niet waar, de firewall zit ertussen"],
+			"correct": 1
 		},
 		"next": true
 	},
@@ -89,8 +89,8 @@ const questions =
 			"In dit voorbeeld weet de eerste DNS server het goede antwoord en geeft die het door aan je modem die het weer aan je computer verteld."
 		],
 		"question": {
-			"ask": "Je vind een USB-stick op de grond buiten de school, wat doe je?",
-			"answers": ["Kijken wat er op staat", "Inleveren bij een docent", "Een virusscanner draaien en dan testen", "Het programma dat erop staat installeren"],
+			"ask": "Iemand die op het modem kan, kan zien welke sites je bezocht hebt",
+			"answers": ["Dat is waar, het modem onthoud dit", "Dat is niet waar, het modem onthoud dit niet", "Dat is alleen waar als je DNS gebruikt", "Dat is waar, Het modem controleert alle verbindingen"],
 			"correct": 0
 		},
 		"next": true
@@ -109,9 +109,9 @@ const questions =
 			"Tekst"
 		],
 		"question": {
-			"ask": "Als je een website bezoekt weet de eigenaar waar je woont",
-			"answers": ["Dat is niet waar", "Dat is waar", "Ja, ze hebben het IP adres", "Dat is niet waar. De politie kan het wel opzoeken"],
-			"correct": 3
+			"ask": "Een webiste dit je bezocht hebt staat op je harde schijg",
+			"answers": ["Dat is waar, maar na een tijdje vergeet hij dit", "Dat is niet waar, de site staat op het Internet"],
+			"correct": 0
 		},
 		"next": true
 	},
