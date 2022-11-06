@@ -107,14 +107,20 @@ ul {
 /* ----- Image Classes ---
 *
 */
-.imagevsmallr {
+.imagevsmalll {
 	width: 10%;
 	height:  auto;
 }
 
-.imagesmallr {
+.imagesmalll {
 	width: 25%;
 	height:  auto;
+}
+
+.imagemidl {
+	width: 50%;
+	height:  auto;
+}
 }
 .imagesmall {
 	width: 25%;

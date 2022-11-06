@@ -13,10 +13,18 @@ const lessons =
 				"id": "p1_2",
 				"title": "Veilig online 1.2\nVoor wie ben je bang?"
 			},
+			{
+				"id": "p1_3",
+				"title": "Veilig online 1.3\nWat doe je eraan?"
+			},
 
 			{
 				"id": "p2_1",
 				"title": "Veilig online 2.1\nHoe werkt het internet?"
+			},
+			{
+				"id": "p2_2",
+				"title": "Veilig online 2.2\nHoe volgen ze je?"
 			}
 
 		]

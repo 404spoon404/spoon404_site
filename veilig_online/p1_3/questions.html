@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spoon404</title>
+	<link rel="stylesheet" href="../../style_light.css">
+	<script src="./questions.js"></script>
+</head>
+
+<body>
+	<div class="grid-container">
+		<div class="logo"> <img id="logoimg" src="../../IMG/Logo404.png"> </div>
+		
+		<div class="header">
+			<button class="navbutton" id="buttonback" onclick="window.history.go(-1)">  &lt;&lt; Terug</button>
+		</div>
+
+
+		<div class="sidebar">
+			<ul>
+				<li> <a class="sidebar_link" href="../../index.html"> Home </a> </li>
+				<div class="selection_menu">
+					<!-- Chapters and paragraphs get added by script here (see JSON/lessons.js) -->
+				</div>
+			</ul>
+		</div>
+
+		<div class="main">
+		</div>	
+	</div>
+	<!-- This script will generate the question based on the query parameter questions.html?id=<index> -->
+	<script src="../../JS/questions.js"></script>
+</body>
+
+</html>
