@@ -15,9 +15,8 @@ const lessons =
 			},
 			{
 				"id": "p1_3",
-				"title": "Veilig online 1.3\nWat doe je eraan?"
+				"title": "Veilig online 1.3\nHoe blijf je veilig?"
 			},
-
 			{
 				"id": "p2_1",
 				"title": "Veilig online 2.1\nHoe werkt het internet?"
