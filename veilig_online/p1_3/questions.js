@@ -134,7 +134,7 @@ const questions =
 		"Ik gebruik meestal spoon404 als naam op het internet. Mensen die mij kennen weten dat ik dit ben maar mensen die mij niet kennen kunnen mijn echte naam en persoonlijkheid niet gemakkelijk terug vinden. Ik kan ook een naam kiezen voor als ik niet wil dat iemand mij kan terugvinden. Het is dan wel belangrijk dat ik het aan niemand die ik ken vertel. Ook niet aan de mensen die alleen spoon404 kennen.",
 		],
 		"question": {
-			"ask": "Ik (jij dus spoon404) heb een geheime naam op het internet", // The question
+			"ask": "Ik (jij dus niet spoon404) heb een geheime naam op het internet", // The question
 			"answers": [ // The answers available to give
 				"Dat vertel ik niet",
 				"Ja",
