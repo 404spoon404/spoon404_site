@@ -1,10 +1,15 @@
 var s = location.pathname.substring(0, location.pathname.lastIndexOf("/")), s = s.substring(0, s.lastIndexOf("/")) + "&" + s.substring(s.lastIndexOf("/") + 1), s = s.substring(s.lastIndexOf("/") + 1).replaceAll("&", "/");
 var o = Object.fromEntries(new URLSearchParams(window.location.search).entries())["id"];
+console.log(o)
+console.log(s)
 if (o == undefined || +o < 0) o = 0;
 o = +o; // Converts the parameter to a number
 if (o >= questions.length) o = questions.length - 1;
 var q = questions[o];
 var main = document.querySelector("div.main");
+
+
+
 
 (async function() { // Wrapped inside local function so the function can return (performance)
 	if (q.type == "review") {
