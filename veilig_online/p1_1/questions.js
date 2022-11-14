@@ -56,7 +56,7 @@ const questions =
 		"question": {
 			"ask": "Je vind een USB-stick op de grond buiten de school, wat doe je?",
 			"answers": ["Kijken wat er op staat", "Inleveren bij een docent", "Een virusscanner draaien en dan testen", "Het programma dat erop staat installeren"],
-			"correct": 0
+			"correct": 1
 		},
 		"next": true
 	},
