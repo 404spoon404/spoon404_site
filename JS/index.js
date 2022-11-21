@@ -10,7 +10,7 @@ function chptr(index) {
 	q.innerHTML = "";
 	q.appendChild(createListItem("#", "Terug", "createList()"));
 	for (var i = 0; i < lessons[index].paragraphs.length; i++) {
-		q.appendChild(createListItem("./" + lessons[index].id + "/" + lessons[index].paragraphs[i].id + "/questions.html?q=0", lessons[index].paragraphs[i].title));
+		q.appendChild(createListItem("./" + lessons[index].id + "/" + lessons[index].paragraphs[i].id + "/page1.html", lessons[index].paragraphs[i].title));
 	}
 }
 
