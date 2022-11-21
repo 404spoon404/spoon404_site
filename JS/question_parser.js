@@ -2,11 +2,10 @@
 let questionsOnPage = document.querySelectorAll(".question");
 
 var test = 'question1'
-var main = document.querySelector("div.main");
 
-console.log(questions[test].ask);
+//console.log(questions[test].ask);
 
-questionsOnPage.forEach(questionHTML);
+questionsOnPage.forEach(questionMaker);
 
 // ---- Functions ----
 
@@ -16,9 +15,13 @@ function questionHTML(questionName) {
 
 function questionMaker(qName) {
 
-	let curQuest = qName;
-	var fullText = document.createElement("div");
-	fullText.innerText = questions[curQuest].ask;
+	let curQuest = qName.id;
+	let curElement = document.querySelector("#"+curQuest);
+	
+	var fullText = document.createElement("div")
+	fullText.innerHTML = questions[curQuest].ask + "</br>";
+	console.log(fullText)
+	curElement.appendChild(fullText)
 	return fullText;
 
 }
